@@ -30,7 +30,7 @@ class Playtime:
     def play(self):
 
         # Display chat in a fresh browser window as a popup
-        if Options.chat.enable:
+        if Options.chat.chat is 'browser':
             chat_url = f'http://www.twitch.tv/{self.channel_name}/chat?popout='
             try:
                 webbrowser.get('chromium').open_new(f'--app={chat_url}')
@@ -38,6 +38,8 @@ class Playtime:
                 webbrowser.open_new(chat_url)
             except TypeError:
                 webbrowser.get('chromium').open_new(f'--app={chat_url}')  # WTF?
+        if Options.chat.chat is 'cli':
+            os.system(f'./chat -c=#{self.channel_name}')
 
         # Insert the name of only started games into the database
         # This keeps the database from getting too cluttered
