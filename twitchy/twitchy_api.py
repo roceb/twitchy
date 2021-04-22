@@ -22,7 +22,7 @@ def api_call(url, params=None):
     try:
         headers = {
             'Client-ID': 'ikqljee10yj4aew72d0zr5qiihqlsn',
-        'Authorization': 'Bearer bhhy9gfnkhkyb1gagro1a42x2ofbhd'}
+        'Authorization': 'Bearer 3glr92tstehs9vem92s8jcam0nm4aa'}
 
         def make_request():
             r = requests.get(
