@@ -130,7 +130,8 @@ def sync_from_id(username):
         ('first', 100))
     while True:
         results_expected = 100
-        api_endpoint = 'https://api.twitch.tv/helix/users/follows'
+        #api_endpoint = 'https://api.twitch.tv/helix/users/follows'
+        api_endpoint = 'https://api.twitch.tv/helix/streams/followed'
 
         stream_data = api_call(
             api_endpoint,
